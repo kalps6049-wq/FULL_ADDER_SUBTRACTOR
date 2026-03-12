@@ -12,9 +12,8 @@ Hardware – PCs, Cyclone II , USB flasher
 
 Software – Quartus prime
 
-**Full Adder and Full Subtractor**
 
-**Full Adder**
+**Full Adder:**
 
 Full adder is a digital circuit used to calculate the sum of three binary bits. It consists of three inputs and two outputs. Two of the input variables, denoted by A and B, represent the two significant bits to be added. The third input, Cin, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are sum and carry.
 
@@ -36,20 +35,47 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**Truthtable**
+**Truthtable:**
 
-**Procedure**
+**Procedure:**
+1.Open Quartus II and create a new project.
 
-Write the detailed procedure here
+2.Use schematic design entry to draw the full adder circuit.
+
+3.The circuit consists of XOR, AND, and OR gates.
+
+4.Compile the design, verify its functionality through simulation.
+
+5.Implement the design on the target device and program it.
+
+
 
 **Program:**
+```
+//expt3a-full adder
+module fa1_df(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+```
 
-**RTL Schematic**
+**RTL Schematic:**
+<img width="1920" height="1080" alt="Screenshot (88)" src="https://github.com/user-attachments/assets/17a681f2-8d0e-4063-83bc-5e13156b2802" />
 
-**Output Timing Waveform**
+
+**Output Timing Waveform:**
+<img width="1920" height="1080" alt="Screenshot (89)" src="https://github.com/user-attachments/assets/4b5e82da-164c-48e6-905e-facfc39c5aea" />
+
 
 **Result:**
 
