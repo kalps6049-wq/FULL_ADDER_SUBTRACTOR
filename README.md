@@ -42,6 +42,8 @@ Borrow out = A'Bin + A'B + BBin
 
 
 **Procedure:**
+
+
 1.Open Quartus II and create a new project.
 
 2.Use schematic design entry to draw the full adder circuit.
