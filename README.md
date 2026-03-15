@@ -39,43 +39,16 @@ Borrow out = A'Bin + A'B + BBin
 
 
 **Procedure:**
-1.Open Quartus II and create a new project.
-
-2.Use schematic design entry to draw the full adder circuit.
-
-3.The circuit consists of XOR, AND, and OR gates.
-
-4.Compile the design, verify its functionality through simulation.
-
-5.Implement the design on the target device and program it.
 
 
 
 **Program:**
-```
-//expt3a-full adder
-module fa1_df(sum, cout, a, b, cin);
-    output sum;
-    output cout;
-    input a;
-    input b;
-    input cin;
 
-	 wire w1,w2,w3;
-	 assign w1=a^b;
-	 assign w2=a&b;
-	 assign w3=w1&cin;
-	 assign sum=w1^cin;
-	 assign cout=w2|w3;
-endmodule
-```
 
 **RTL Schematic:**
-<img width="1920" height="1080" alt="Screenshot (88)" src="https://github.com/user-attachments/assets/17a681f2-8d0e-4063-83bc-5e13156b2802" />
 
 
 **Output Timing Waveform:**
-<img width="1920" height="1080" alt="Screenshot (89)" src="https://github.com/user-attachments/assets/4b5e82da-164c-48e6-905e-facfc39c5aea" />
 
 
 **Result:**
